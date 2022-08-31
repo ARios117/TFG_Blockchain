@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if b %}
+    <h1>Emisor: {{ b.emiter }}</h1>
+
+    <p><strong>Text:</strong> {{ b.text }}</p>
+    <p><strong>Descripcion:</strong> {{ b.description }}</p>
+    <p><strong>Score:</strong> {{ b.score }}</p>
+    
+  {% else %}
+    <h2>ERROR 404 NOT FOUND</h2>
+    El block especificado no existe. Compruebe que la URL sea correcta.
+  {% endif %}
+  
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block content %}
+<h1>Blockchain page</h1>
+
+  <p>Bienvenido a <em>Blockchain page</em></p>
+
+  {% if user.is_authenticated %}
+      <p>Mensajes Recibidos:</p>
+      {% for b1 in blocks_recieved %}
+      <li>
+      <strong>
+          <a href="{{ b1.get_absolute_url }}">{{ b1.date }} | {{ b1.text }}</a>
+      </strong>
+      </li>
+      {% endfor %}
+
+  {% else %}
+    <li><a href="{% url 'login'%}?next={{request.path}}">Log In</a></li>
+    <li><a href="{% url 'signup'%}?next={{request.path}}">Sign-Up</a></li>
+  {% endif %}
+
+<br> 
+<br> 
+
+{% endblock %}
