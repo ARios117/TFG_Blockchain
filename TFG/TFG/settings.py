@@ -90,7 +90,7 @@ if os.getenv('SQLITE', False):
         }
 else:
     db_from_env = dj_database_url.config(
-                    default='postgres://alumnodb:alumnodb@localhost:5432/examen',
+                    default='postgres://alumnodb:alumnodb@localhost:5432/TFG',
                     conn_max_age=500)
     DATABASES['default'].update(db_from_env)
 

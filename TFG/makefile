@@ -1,4 +1,4 @@
-export PGDATABASE := examen
+export PGDATABASE := TFG
 export PGUSER := alumnodb
 export PGPASSWORD := alumnodb
 export PGCLIENTENCODING := LATIN9
